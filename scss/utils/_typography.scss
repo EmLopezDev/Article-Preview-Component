@@ -1,0 +1,38 @@
+@use "./functions" as f;
+
+$font-size-medium: 20;
+$font-size-small: 13;
+$font-weight-bold: 700;
+$font-weight-medium: 500;
+$line-height-medium: 140%;
+$line-height-small: 130%;
+$letter-spacing-large: 25%;
+$letter-spacing-medium: 0.12%;
+$letter-spacing-small: 0.25px;
+
+@mixin text-preset-1 {
+    font-size: f.rem($font-size-medium);
+    font-weight: $font-weight-bold;
+    line-height: $line-height-small;
+    letter-spacing: $letter-spacing-small;
+}
+
+@mixin text-preset-2 {
+    font-size: f.rem($font-size-small);
+    font-weight: $font-weight-medium;
+    line-height: $line-height-medium;
+    letter-spacing: $letter-spacing-medium;
+}
+
+@mixin text-preset-3 {
+    font-size: f.rem($font-size-small);
+    font-weight: $font-weight-bold;
+    line-height: $line-height-medium;
+    letter-spacing: $letter-spacing-medium;
+}
+
+@mixin text-preset-4 {
+    font-size: f.rem($font-size-small);
+    line-height: $line-height-medium;
+    letter-spacing: $letter-spacing-large;
+}
