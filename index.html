@@ -11,32 +11,44 @@
             sizes="32x32"
             href="./images/favicon-32x32.png"
         />
+        <link rel="stylesheet" href="./dist/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+            rel="stylesheet"
+        />
 
-        <title>Frontend Mentor | Article preview component</title>
+        <title>Article Preview Component</title>
     </head>
     <body>
-        <main>
-            <img src="./images/drawers.jpg" alt="green drawers in room" />
-            <section>
-                <h1>
+        <main class="card">
+            <img
+                class="card__image"
+                src="./images/drawers.jpg"
+                alt="green drawers in room"
+            />
+            <section class="card__info">
+                <h1 class="card__header">
                     Shift the overall look and feel by adding these wonderful
                     touches to furniture in your home
                 </h1>
-                <p>
+                <p class="card__details">
                     Ever been in a room and felt like something was missing?
                     Perhaps it felt slightly bare and uninviting. I’ve got some
                     simple tips to help you make any room feel complete.
                 </p>
-                <div>
+                <div class="card__user">
                     <img
+                        class="card__user--image"
                         src="./images/avatar-michelle.jpg"
                         alt="headshot of Michelle"
                     />
-                    <div>
-                        <span>Michelle Appleton</span>
-                        <span>28 Jun 2020</span>
+                    <div card__user--details>
+                        <span class="card__user--name">Michelle Appleton</span>
+                        <span class="card__user--date">28 Jun 2020</span>
                     </div>
-                    <button>
+                    <button class="card__button">
                         <img src="./images/icon-share.svg" alt="share icon" />
                     </button>
                     <span>Share</span>
