@@ -31,6 +31,13 @@ $letter-spacing-small: 0.25px;
     letter-spacing: $letter-spacing-medium;
 }
 
+@mixin text-preset-3-large {
+    font-size: f.rem($font-size-small);
+    font-weight: $font-weight-medium;
+    line-height: $line-height-medium;
+    letter-spacing: $letter-spacing-large;
+}
+
 @mixin text-preset-4 {
     font-size: f.rem($font-size-small);
     line-height: $line-height-medium;

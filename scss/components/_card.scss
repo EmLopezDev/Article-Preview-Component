@@ -66,6 +66,7 @@
     &__user {
         display: flex;
         align-items: center;
+        position: relative;
 
         &--image {
             width: u.rem(40);
@@ -90,14 +91,72 @@
         &--date {
             color: var(--grey-400);
         }
-    }
 
-    &__button {
-        width: u.rem(32);
-        height: u.rem(32);
-        border: none;
-        border-radius: 50%;
-        color: var(--grey-500);
-        background-color: var(--grey-200);
+        &--share {
+            @include u.text-preset-3-large;
+            color: var(--grey-400);
+            background-color: var(--grey-900);
+            display: flex;
+            align-items: center;
+            position: absolute;
+            left: -30px;
+            padding: u.rem(32) 0 u.rem(32) u.rem(30);
+            height: u.rem(76);
+            width: u.rem(327);
+            border-radius: 0 0 u.rem(10) u.rem(10);
+
+            @include u.breakpoint(small) {
+                justify-content: space-evenly;
+                width: u.rem(220);
+                height: u.rem(40);
+                z-index: 1;
+                border-radius: u.rem(8);
+                top: u.rem(-60);
+                left: u.rem(180);
+                color: var(--grey-400);
+                padding: u.rem(24);
+
+                &::after {
+                    content: "";
+                    width: 10px;
+                    position: absolute;
+                    bottom: -10px;
+                    left: 50%;
+                    transform: rotate(180deg);
+                    border-width: 5px;
+                    border-style: solid;
+                    border-color: transparent transparent var(--grey-900)
+                        transparent;
+                }
+            }
+
+            @include u.breakpoint(medium) {
+                top: u.rem(-70);
+                left: u.rem(289);
+            }
+
+            & img {
+                width: u.rem(20);
+                height: u.rem(20);
+                margin-left: u.rem(24);
+            }
+        }
+
+        &--share-none {
+            display: none;
+        }
+
+        &--button {
+            width: u.rem(32);
+            height: u.rem(32);
+            border: none;
+            border-radius: 50%;
+            background-color: var(--grey-200);
+            position: relative;
+
+            &--active {
+                background-color: var(--grey-900);
+            }
+        }
     }
 }
