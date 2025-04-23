@@ -154,8 +154,10 @@
             background-color: var(--grey-200);
             position: relative;
 
-            &--active {
-                background-color: var(--grey-900);
+            @include u.breakpoint(small) {
+                &.active {
+                    background-color: var(--grey-900);
+                }
             }
         }
     }

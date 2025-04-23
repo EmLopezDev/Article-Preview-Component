@@ -18,7 +18,7 @@
             href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
             rel="stylesheet"
         />
-
+        <script defer src="./main.js"></script>
         <title>Article Preview Component</title>
     </head>
     <body>
@@ -49,7 +49,7 @@
                         <span class="card__user--date">28 Jun 2020</span>
                     </div>
                     <div
-                        id="toast"
+                        id="share_toast"
                         class="card__user--share card__user--share-none"
                     >
                         <span>SHARE</span>
@@ -67,7 +67,7 @@
                             alt="pinterest icon"
                         />
                     </div>
-                    <button class="card__user--button">
+                    <button id="share_button" class="card__user--button">
                         <img
                             class="card__button--icon"
                             src="./images/icon-share.svg"
